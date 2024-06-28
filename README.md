@@ -4,5 +4,7 @@
 
 Моделирование охватывает бизнес-процессы: Поиск товаров на яндекс-маркете и просмотр их на сайте
 
-Ссылка на таблицу https://drawsql.app/teams/belaz-team/diagrams/onlinemarket
+### Er диаграмма
+![Er диаграмма](https://github.com/51Sirius/BonusTrackProject/blob/main/er-diagram.png?raw=true)
+[Ссылка на er диаграмму на сайте drawsql](https://drawsql.app/teams/belaz-team/diagrams/onlinemarket)
 
