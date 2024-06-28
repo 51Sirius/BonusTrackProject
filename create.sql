@@ -62,7 +62,7 @@ CREATE TABLE "SearchHistory"(
 );
 CREATE TABLE "PickupPoint"(
     "Id" BIGINT NOT NULL,
-    "Place" BIGINT NOT NULL,
+    "Place" VARCHAR(255) NOT NULL,
     "TimeToWork" INTEGER NOT NULL
 );
 ALTER TABLE
