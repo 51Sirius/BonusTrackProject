@@ -29,7 +29,11 @@
 ### Er диаграмма
 ![Er диаграмма](https://github.com/51Sirius/BonusTrackProject/blob/main/er-diagram.png?raw=true)
 [Ссылка на er диаграмму на сайте drawsql](https://drawsql.app/teams/belaz-team/diagrams/onlinemarket)
-
+### Скрипты
+#### Скрипт заполнения таблиц
+Скрипт предоставлен в файле insert.sql, скрипт был сгенирирован с помощью написанной мною программы, которую можно ![посмотреть](https://github.com/51Sirius/BonusTrackProject/blob/main/script.ipynb), также в ней есть подробный отчет, как она устроена.
+#### Скрипт создания таблиц
+Скрипт предоставлен в файле create.sql
 <a name="desc-table"></a>
 ### Описание таблиц, столбцов
 <a name="desc-table-1"></a>
