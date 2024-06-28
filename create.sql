@@ -28,7 +28,7 @@ CREATE INDEX "productcategory_name_index" ON
     "ProductCategory"("Name");
 CREATE TABLE "User"(
     "Id" BIGINT NOT NULL,
-    "PickupPointIId" BIGINT NOT NULL,
+    "PickupPointId" BIGINT NOT NULL,
     "FirstName" VARCHAR(255) NOT NULL,
     "LastName" VARCHAR(255) NOT NULL,
     "SurName" VARCHAR(255) NOT NULL,
@@ -36,7 +36,7 @@ CREATE TABLE "User"(
     "Email" VARCHAR(255) NOT NULL,
     "PhoneNumber" VARCHAR(255) NOT NULL,
     "Score" BIGINT NULL,
-    "Gender" BIGINT NULL,
+    "Gender" VARCHAR(255) NULL,
     "CreateDate" DATE NOT NULL
 );
 ALTER TABLE
@@ -63,7 +63,7 @@ CREATE TABLE "SearchHistory"(
 CREATE TABLE "PickupPoint"(
     "Id" BIGINT NOT NULL,
     "Place" BIGINT NOT NULL,
-    "TimeToWork" VARCHAR(255) NOT NULL
+    "TimeToWork" INTEGER NOT NULL
 );
 ALTER TABLE
     "PickupPoint" ADD PRIMARY KEY("Id");
@@ -145,7 +145,7 @@ ALTER TABLE
 ALTER TABLE
     "Product" ADD CONSTRAINT "product_marketid_foreign" FOREIGN KEY("MarketId") REFERENCES "Market"("Id");
 ALTER TABLE
-    "User" ADD CONSTRAINT "user_pickuppointiid_foreign" FOREIGN KEY("PickupPointIId") REFERENCES "PickupPoint"("Id");
+    "User" ADD CONSTRAINT "user_pickuppointid_foreign" FOREIGN KEY("PickupPointId") REFERENCES "PickupPoint"("Id");
 ALTER TABLE
     "Favorites" ADD CONSTRAINT "favorites_productid_foreign" FOREIGN KEY("ProductId") REFERENCES "Product"("Id");
 ALTER TABLE
