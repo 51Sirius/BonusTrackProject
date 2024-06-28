@@ -2,6 +2,7 @@
 ## Содержание
 
 [Описание предметной области](###po)
+[Описание таблиц, столбцов](###desc-table)
 
 <a name="po"></a>
 ### Описание предметной области
@@ -13,6 +14,7 @@
 ![Er диаграмма](https://github.com/51Sirius/BonusTrackProject/blob/main/er-diagram.png?raw=true)
 [Ссылка на er диаграмму на сайте drawsql](https://drawsql.app/teams/belaz-team/diagrams/onlinemarket)
 
+<a name="desc-table"></a>
 ### Описание таблиц, столбцов
 
 #### Таблица Product
