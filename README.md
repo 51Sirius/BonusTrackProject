@@ -1,2 +1,3 @@
 # BonusTrackProject
-Finaly project for bonus track itmo.
+Ссылка на таблицу https://drawsql.app/teams/belaz-team/diagrams/onlinemarket
+
