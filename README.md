@@ -51,7 +51,7 @@
 
 <a name="scripts-3"></a>
 #### Скрипты запросов
-'''SQL
+'''sql
 SELECT p."Name", p."Price" FROM "Product" as p
 JOIN "ProductSubCategory" as PSC on p."ProductSubCategoryId" = PSC."Id"
 JOIN "ProductCategory" as PC on PSC."ProductCategoryId" = PC."Id"
