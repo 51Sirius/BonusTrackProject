@@ -87,7 +87,7 @@ SELECT p."Name", p."Price", p."Rating" FROM "Product" as p
 JOIN "TopMarkets" AS TP on P."MarketId" = TP."Id"
 order by p."Rating" DESC
 ```
-5. запрос: 
+5. запрос: получение товаров у которых средний рейтинг комментариев выше пяти
 ```sql
 WITH "AvgProductCommentsRating" as (SELECT P."Id" as "ProductId",AVG(TC."Rating") as "Rating" FROM "Product" as p
                                     JOIN "Comment" AS TC on TC."ProductId" = P."Id"
