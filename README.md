@@ -67,9 +67,15 @@ JOIN "User" as U on U."Id" = SH."UserId"
 WHERE U."Id" = 3
 order by p."Rating" DESC
 ```
-3. запрос: 
+3. запрос: получить список товаров, которые можно быстро доставить для первого пользователя
 ```sql
-
+SELECT p."Name", p."Price", p."Rating" FROM "Product" as p
+JOIN "Storehouse" AS SH on P."StorehouseId" = SH."Id"
+JOIN "Distance" As D on SH."Id" = D."StorehouseId"
+JOIN "PickupPoint" as PP on D."PickupPointId"=PP."Id" 
+JOIN "User" as U on U."PickupPointId" = PP."Id"
+WHERE U."Id"=0 and D."Distance"<1000
+order by p."Rating" DESC
 ```
 4. запрос: 
 ```sql
