@@ -51,13 +51,33 @@
 
 <a name="scripts-3"></a>
 #### Скрипты запросов
-1. Первый запрос: получение товаров из категории спорт, товары отсортированны по рейтингу
+1. запрос: получение товаров из категории спорт, товары отсортированны по рейтингу
 ```sql
 SELECT p."Name", p."Price", p."Rating" FROM "Product" as p
 JOIN "ProductSubCategory" as PSC on p."ProductSubCategoryId" = PSC."Id"
 JOIN "ProductCategory" as PC on PSC."ProductCategoryId" = PC."Id"
 WHERE PC."Name" = 'Спорт'
 order by p."Rating" DESC
+```
+2. запрос: получить историю поиска, для 3 пользователя
+```sql
+SELECT p."Name", p."Price" FROM "Product" as p
+JOIn "SearchHistory" as SH on SH."ProductId" = P."Id"
+JOIN "User" as U on U."Id" = SH."UserId"
+WHERE U."Id" = 3
+order by p."Rating" DESC
+```
+3. запрос: 
+```sql
+
+```
+4. запрос: 
+```sql
+
+```
+5. запрос: 
+```sql
+
 ```
 
 <a name="desc-table"></a>
