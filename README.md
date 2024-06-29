@@ -51,6 +51,7 @@
 
 <a name="scripts-3"></a>
 #### Скрипты запросов
+1. Первый запрос: получение товаров из категории спорт, товары отсортированны по рейтингу
 ```sql
 SELECT p."Name", p."Price" FROM "Product" as p
 JOIN "ProductSubCategory" as PSC on p."ProductSubCategoryId" = PSC."Id"
