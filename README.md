@@ -77,9 +77,15 @@ JOIN "User" as U on U."PickupPointId" = PP."Id"
 WHERE U."Id"=0 and D."Distance"<1000
 order by p."Rating" DESC
 ```
-4. запрос: 
+4. запрос: получение товаров, где высокий рейтинг продавцов
 ```sql
+WITH "TopMarkets" as (SELECT * From "Market" as M
+                  WHERE m."Rating" > 5)
 
+
+SELECT p."Name", p."Price", p."Rating" FROM "Product" as p
+JOIN "TopMarkets" AS TP on P."MarketId" = TP."Id"
+order by p."Rating" DESC
 ```
 5. запрос: 
 ```sql
