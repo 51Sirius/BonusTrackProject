@@ -53,11 +53,11 @@
 #### Скрипты запросов
 1. Первый запрос: получение товаров из категории спорт, товары отсортированны по рейтингу
 ```sql
-SELECT p."Name", p."Price" FROM "Product" as p
+SELECT p."Name", p."Price", p."Rating" FROM "Product" as p
 JOIN "ProductSubCategory" as PSC on p."ProductSubCategoryId" = PSC."Id"
 JOIN "ProductCategory" as PC on PSC."ProductCategoryId" = PC."Id"
 WHERE PC."Name" = 'Спорт'
-order by p."Rating" asc
+order by p."Rating" DESC
 ```
 
 <a name="desc-table"></a>
