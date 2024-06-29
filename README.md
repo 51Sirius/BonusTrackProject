@@ -51,7 +51,13 @@
 
 <a name="scripts-3"></a>
 #### Скрипты запросов
-Cooming soon
+'''SQL
+SELECT p."Name", p."Price" FROM "Product" as p
+JOIN "ProductSubCategory" as PSC on p."ProductSubCategoryId" = PSC."Id"
+JOIN "ProductCategory" as PC on PSC."ProductCategoryId" = PC."Id"
+WHERE PC."Name" = 'Спорт'
+order by p."Rating" asc
+'''
 
 <a name="desc-table"></a>
 ### Описание таблиц, столбцов
