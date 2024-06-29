@@ -89,7 +89,15 @@ order by p."Rating" DESC
 ```
 5. запрос: 
 ```sql
+WITH "AvgProductCommentsRating" as (SELECT P."Id" as "ProductId",AVG(TC."Rating") as "Rating" FROM "Product" as p
+                                    JOIN "Comment" AS TC on TC."ProductId" = P."Id"
+                                    GROUP by P."Id")
+                                  
 
+SELECT p."Name", p."Price", p."Rating" FROM "Product" as p
+JOIN "AvgProductCommentsRating" AS APC on APC."ProductId" = P."Id"
+WHERE APC."Rating" > 5
+order by p."Rating" DESC
 ```
 
 <a name="desc-table"></a>
